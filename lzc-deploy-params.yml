@@ -1,0 +1,30 @@
+params:
+  - id: login_user
+    type: string
+    name: "Login User"
+    description: "Default login username for DeepTutor"
+    default_value: "admin"
+    optional: true
+
+  - id: login_password
+    type: secret
+    name: "Login Password"
+    description: "Default login password for DeepTutor"
+    default_value: "$random(len=20)"
+    optional: true
+
+locales:
+  zh:
+    login_user:
+      name: "登录用户"
+      description: "DeepTutor 默认登录用户名"
+    login_password:
+      name: "登录密码"
+      description: "DeepTutor 默认登录密码"
+  en:
+    login_user:
+      name: "Login User"
+      description: "Default login username for DeepTutor"
+    login_password:
+      name: "Login Password"
+      description: "Default login password for DeepTutor"

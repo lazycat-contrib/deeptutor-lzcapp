@@ -1,0 +1,36 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/community.lazycat.app.deeptutor.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: deeptutor
+
+build:
+  toolchains:
+    - kind: docker
+  run_buildscript: false
+
+images:
+  - id: deeptutor
+    target: service
+    service: deeptutor
+    source: ghcr.io/hkuds/deeptutor
+    channel: stable
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
