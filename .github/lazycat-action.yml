@@ -14,11 +14,6 @@ update:
     type: image
     image: deeptutor
 
-build:
-  toolchains:
-    - kind: docker
-  run_buildscript: false
-
 images:
   - id: deeptutor
     target: service
@@ -26,7 +21,8 @@ images:
     source: ghcr.io/hkuds/deeptutor
     channel: stable
     delivery:
-      mode: lazycat
+      mode: mirror
+      require_digest_match: true
 
 stores:
   official:

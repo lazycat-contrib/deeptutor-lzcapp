@@ -24,7 +24,7 @@ application:
 services:
   deeptutor:
     # ghcr.io/hkuds/deeptutor:1.5.15
-    image: registry.lazycat.cloud/hkuds/deeptutor:1.5.15
+    image: ghcr.io/hkuds/deeptutor:1.5.15
     environment:
       # 后端 API 端口
       - DEEPTUTOR_DOCKER_BACKEND_PORT=8001
