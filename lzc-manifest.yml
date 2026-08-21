@@ -9,17 +9,6 @@ application:
       backend: http://deeptutor:8001/
   public_path:
     - /
-  # 免密登录 - 自动填充登录凭据
-  injects:
-    - id: login-autofill
-      when:
-        - /login
-        - /#login
-      do:
-        - src: builtin://simple-inject-password
-          params:
-            user: "{{ .U.login_user }}"
-            password: "{{ .U.login_password }}"
 
 services:
   deeptutor:
@@ -47,9 +36,8 @@ services:
 usage: |
   DeepTutor - 智能体原生个性化辅导工作空间
 
-  1. 打开应用后，使用部署时设置的用户名和密码登录
-  2. 在设置中配置 LLM 供应商（支持 LM Studio / Ollama / vLLM 等）
-  3. 开始使用辅导、问题解决、测验生成等功能
+  1. 打开应用后，在设置中配置 LLM 供应商（支持 LM Studio / Ollama / vLLM 等）
+  2. 开始使用辅导、问题解决、测验生成等功能
 
   注意：如需配置 API 地址，请访问应用设置页面中的
   "next_public_api_base_external" 选项
