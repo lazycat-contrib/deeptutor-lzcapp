@@ -9,11 +9,11 @@ application:
       backend: http://deeptutor:8001/
   public_path:
     - /
-
 services:
   deeptutor:
     # ghcr.io/hkuds/deeptutor:1.5.15
-    image: ghcr.io/hkuds/deeptutor:1.5.15
+    # upstream: ghcr.io/hkuds/deeptutor:1.5.15
+    image: ghcr.1ms.run/hkuds/deeptutor:1.5.15
     environment:
       # 后端 API 端口
       - DEEPTUTOR_DOCKER_BACKEND_PORT=8001
@@ -32,8 +32,7 @@ services:
       timeout: 10s
       retries: 3
       start_period: 60s
-
-usage: |
+usage: |-
   DeepTutor - 智能体原生个性化辅导工作空间
 
   1. 打开应用后，在设置中配置 LLM 供应商（支持 LM Studio / Ollama / vLLM 等）
