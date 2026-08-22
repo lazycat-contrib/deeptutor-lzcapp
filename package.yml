@@ -1,20 +1,17 @@
 package: community.lazycat.app.deeptutor
-version: 1.5.15
+version: 1.5.16
 name: DeepTutor
 description: "智能体原生个性化辅导 - 将辅导、问题解决、测验生成、研究和精通练习连接在一个可扩展的系统中"
 author: lazycat-contrib
 license: MIT
 homepage: https://github.com/HKUDS/DeepTutor
 min_os_version: 1.5.0
-
 unsupported_platforms:
   - ios
   - android
-
 permissions:
   required:
     - net.internet
-
 locales:
   zh:
     name: DeepTutor
