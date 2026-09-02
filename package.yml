@@ -1,5 +1,5 @@
 package: community.lazycat.app.deeptutor
-version: 1.6.2
+version: 1.6.3
 name: DeepTutor
 description: "智能体原生个性化辅导 - 将辅导、问题解决、测验生成、研究和精通练习连接在一个可扩展的系统中"
 author: lazycat-contrib
