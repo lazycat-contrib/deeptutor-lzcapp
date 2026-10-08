@@ -12,8 +12,8 @@ application:
 services:
   deeptutor:
     # ghcr.io/hkuds/deeptutor:1.5.15
-    # upstream: ghcr.io/hkuds/deeptutor:1.6.13
-    image: ghcr.1ms.run/hkuds/deeptutor:1.6.13
+    # upstream: ghcr.io/hkuds/deeptutor:1.6.14
+    image: ghcr.1ms.run/hkuds/deeptutor:1.6.14
     environment:
       # 后端 API 端口
       - DEEPTUTOR_DOCKER_BACKEND_PORT=8001
